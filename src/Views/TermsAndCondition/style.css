@@ -1,0 +1,19 @@
+.un-selectable{
+    user-select: none;
+    padding: 0 20px;
+  }
+
+  .terms-conditions-main{
+    padding: 0 20px;
+    margin: 0;
+    text-align: justify;
+   
+    
+  }
+
+  .header-text {
+    text-align: center;
+  }
+.alpha-list li{
+    list-style-type: circle;
+}  

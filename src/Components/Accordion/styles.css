@@ -1,0 +1,32 @@
+.accordion{
+   display: grid;
+   justify-content: center;
+}
+
+.accordion-header{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.accordion-item{
+    width: 80vw;
+}
+
+.accordion__button {
+    display: flex;
+    align-items: center;
+}
+
+.accordion__panel{
+    border: none;
+}
+.accordion__button{
+    background-color: white !important;
+}
+
+.backgroud_light{
+    background-color: white !important;
+}
+.list-style{
+    list-style-type: disc;
+}

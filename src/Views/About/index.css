@@ -1,0 +1,497 @@
+.about-section-one {
+  background-image: url("../../assets/Manifestation.png");
+  height: 74vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.businessLogo-img-mob {
+  display: none;
+}
+.back-sec{
+  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 0%, rgba(234,238,243,1) 100%); 
+}
+.google-store-img-about img, .apple-store-img-about img {
+  width: 100%;
+  height: 50px;
+  border-radius: 7px;
+}
+
+.hero-text-about {
+  font-family: Hero;
+  font-size: 27px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #fff;
+}
+.wrapper-div-about::after {
+  content: "";
+  position: absolute;
+  height: 30px;
+  left: -10%;
+  right: -10%;
+  border-radius: 50%;
+  bottom: -25px;
+  background: #fff;
+  width: 100%;
+}
+.wrapper-div-about {
+  background-color: #48769d;
+  position: absolute;
+  height: 75vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.background-wave {
+  background-image: url("../../assets/waves.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.businessLogo-img {
+  height: 40px;
+}
+
+.text-size {
+  font-size: 20px;
+}
+
+.align-img {
+  text-align: end;
+}
+
+.read-btn {
+  background-color: #035d9e;
+  color: white;
+  border-radius: 40px;
+  width: 35%;
+}
+.read-btn:hover{
+    color: white;
+}
+
+.home-screen-img-about {
+  height: 660px;
+  margin-right: 50px;
+}
+
+.about-info-height {
+  height: 78vh;
+}
+.guru-img {
+  height: 400px;
+  border-radius: 40px;
+}
+
+
+.heading-content h2{
+    font-size: 5vw;
+    font-family: "monopola_scriptregular";
+    color: #035D9E;
+}
+.heading-content h4{
+    font-size: 2.4vw;
+    font-weight: 400;
+    color: #035D9E;
+}
+.heading-content p{
+    font-size: 1.3rem;
+    color: #035D9E;
+}
+.heading-content h5{
+    font-size: 1.5vw;
+    color: #035D9E;
+    font-family: hero;
+    font-weight: normal;
+}
+.heading-content p{
+    color: #035D9E;
+}
+
+.sub-content p{
+    font-size: 1.3rem;
+    color: #414141;
+}
+.sub-content h5{
+    font-size: 23px;
+    color: #414141;
+    font-weight: 400;
+}
+
+.pilar-founder-img{
+    height: 300px;
+    border-radius: 24px;
+}
+.hearder-text{
+    font-family: "hero";
+    font-weight: 600 !important;
+    font-size: 20px;
+    color: white;
+}
+
+.powered-text{
+    font-family: "hero";
+    color: white;
+    font-weight: 400;
+}
+
+.powered-yoga-section{
+    background-image: url("../../assets/Group 329.png");
+    height: 100vh;
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position: top;
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #FFFFFF
+}
+.poweredby-text-width{
+    width: 60%;
+}
+
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+
+  position: absolute;
+  z-index: 1;
+}
+#foooltip {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  font-size: 12px;
+  position: absolute;
+  left: 70%;
+  z-index: 1;
+}
+
+.tooltiptext:hover > #foooltip {
+  visibility: visible;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* legacy */
+
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+
+  position: absolute;
+  z-index: 1;
+}
+#fooltip-about-legacy {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  font-size: 12px;
+  position: absolute;
+
+  left: 56%;
+  z-index: 1;
+}
+
+
+
+
+.tooltiptext:hover > #fooltip-about-legacy {
+  visibility: visible;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+
+/* founder */
+
+#fooltip-about-founder {
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  font-size: 12px;
+  position: absolute;
+
+  left: 59%;
+  z-index: 1;
+}
+
+
+
+
+.tooltiptext:hover > #fooltip-about-founder {
+  visibility: visible;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* nispand */
+
+
+#fooltip-about-nispand{
+  visibility: hidden;
+  width: 100px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 3px 0;
+  font-size: 12px;
+  position: absolute;
+
+  left: 63%;
+  z-index: 1;
+}
+
+
+
+
+.tooltiptext:hover > #fooltip-about-nispand{
+  visibility: visible;
+}
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+
+/* inner-nav-link */
+.inner-nav{
+  text-align: center;
+  margin-top: 20px;
+}
+.inner-nav-link{
+  color: white;
+    border-right: 1px solid white;
+    padding: 0 10px;
+}
+.inner-nav-link:last-child{
+  border-right: none;
+}
+.inner-nav-link:focus{
+  color: white;
+}
+.inner-nav-link:hover{
+  color: white;
+  cursor: pointer;
+}
+@media screen and (min-device-width: 1403px) and (max-device-width: 1919px) { 
+  .about-info-height {
+    height: 111vh;
+}}
+
+@media screen and (max-width: 1402px) {
+  .text-size {
+    font-size: 16px;
+}
+.about-info-height {
+  height: 102vh;
+}
+.businessLogo-img {
+  height: 40px;
+}
+  .home-screen-img-about {
+    height: 540px;
+    margin-right: 50px;
+}
+.guru-img {
+  height: 250px;
+  border-radius: 40px;
+}
+.pilar-founder-img {
+  height: 180px;
+}
+.hearder-text {
+  font-family: "hero";
+  font-weight: 600 !important;
+  font-size: 12px;
+  color: white;
+  
+}
+}
+
+@media screen and (max-width: 420px){
+  .businessLogo-img {
+    display: none;
+}
+  .inner-nav{
+    display: none;
+  }
+  .bold-text {
+    font-size: 27px;
+}
+.wrapper-div-about::after {
+  bottom: -9px;
+  width: fit-content;
+}
+.about-section-one {
+  height: 53vh;
+}
+.wrapper-div-about {
+  height: 69vh;
+}
+.hearder-text {
+ width: 310px !important;
+}
+.align-img {
+  text-align: center;
+}
+.home-screen-img-about {
+  width: 176px;
+    height: 354px;
+  margin-right: 0px;
+}
+.contact-first {
+  height: 52vh;
+}
+.businessLogo-img-mob {
+  width: 176px;
+  height: 30px;
+  display: block;
+}
+.text-size {
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 40px;
+}
+.nispand-info-container{
+  text-align: center;
+}
+.read-btn {
+  background-color: #035d9e;
+  color: white;
+  border-radius: 40px;
+  width: 111px;
+  font-size: 12px;
+}
+.down-txt-mob{
+  font-size: 15px;
+}
+.justifiy-content{
+  justify-content: center !important;
+}
+.apple-store-img-about img, .google-store-img-about img{
+  width: fit-content;
+  height: 42px;
+}
+
+.google-store-img-about{
+  padding: 0px 5px;
+}
+.apple-store-img-about{
+  padding: 0px 5px;
+}
+.background-wave {
+  height: 110vh;
+}
+.heading-content h2 {
+  font-size: 27px;
+}
+.heading-content h5 {
+  font-size: 16px;
+}
+.heading-content{
+  text-align: center;
+}
+.guru-heading h5{
+  font-size: 25px !important;
+}
+.guru-heading p{
+  font-size: 14px !important;
+}
+.sub-content h5 {
+  font-size: 14px;
+  text-align: center;
+  padding: 0px 20px;
+}
+.sub-content{
+  text-align: center;
+}
+.powered-text {
+  font-family: 'hero';
+  color: white;
+  font-weight: bolder;
+  font-size: 20px;
+}
+.about-yoga-logo{
+  width: 200px !important;
+  height: 74px !important;
+}
+.poweredby-text-width {
+  width: 100%;
+  margin: 25px 0px;
+}
+
+}
+
+
+@media screen and (min-device-height: 650px) and (max-device-height: 850px){
+  .background-wave {
+    height: 140vh;
+}
+}

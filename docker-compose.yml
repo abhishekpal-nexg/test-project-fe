@@ -1,0 +1,7 @@
+version: '3.3'
+services:
+  server:
+    image: registry-intl.ap-south-1.aliyuncs.com/meditation/nispand-website:latest
+    stdin_open: true
+    tty: true
+    network_mode: "host"

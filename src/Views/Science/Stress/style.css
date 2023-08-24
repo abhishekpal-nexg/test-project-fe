@@ -1,0 +1,75 @@
+.detail-text{
+    
+    font-size: 20px;
+}
+.image-container
+{
+    width: 40%;
+}
+.heading{
+    font-family: "monopola_scriptregular";
+    color: #035d9e;
+    font-size: 60px;
+    padding-bottom: 0px;
+}
+.sub-heading{
+    font-family: 'hero';
+    font-size: 30px;
+    color: #035d9e;
+    font-weight: 800;
+    padding-left: 34px;
+
+}
+.list{
+    width: 70%;
+    margin: 0 auto;
+    padding: 40px;
+}
+li{
+    font-size: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+.unorder-list li{
+    list-style: disc;
+}
+.unorder-list li::marker{
+    color: #035d9e;
+}
+.question
+{
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.header{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px;
+}
+.border{
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.16);
+    background-color: #fff;
+    border-radius: 36px;
+    
+}
+.table{
+    text-align: center;
+}
+.table li{
+    font-size: 20px;
+    text-align: center;
+    padding: 20px 10px ;
+}
+.d-j-a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top-bottom
+{
+    margin-top: 100px;
+    margin-bottom: 100px;
+}

@@ -1,0 +1,16 @@
+.sub-text {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.center {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+.header-text {
+  text-align: center;
+}
+.alpha-list{
+  list-style-type: circle;
+}

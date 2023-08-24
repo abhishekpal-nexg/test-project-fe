@@ -1,0 +1,117 @@
+.Dynamic-btn{
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   text-align: center;
+   margin: 2rem 12rem;
+}
+.support-img{
+    background-image: url('../../assets/Positivity.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Support-search{
+    position: relative;
+    top: 20rem;
+}
+
+.support-header{
+    font-family: monopola_scriptregular;
+    position: relative;
+    font-size: 60px;
+    color: white;
+    bottom: 12rem;
+    left: 15rem;
+}
+
+.support-input{
+    position: relative;
+    width: 25rem;
+    height: 3rem;
+    padding-left: 1rem;
+    border-radius: 2rem;
+    border: none;
+    outline: none;
+    bottom: 11rem;
+    left: 13rem;
+}
+
+.support-input::placeholder{
+    padding-left: 1rem;
+}
+
+.custom-button{
+    width: 16rem;
+    height: 3.5rem;
+    border: 2px solid #2497d1;
+    background-color: white;
+    color:#2497d1;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    font-weight: 400;
+}
+
+.custom-button:hover {
+    background-color: #2497d1;
+    color: white;
+}
+
+
+/* tooltip */
+
+.tooltip-range {
+    position: relative;
+    display: inline-block;
+
+  }
+  
+  /* Tooltip text */
+  .tooltip-range .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    top: 90%;
+    border-radius: 6px;
+   
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+  }
+  
+  /* Show the tooltip text when you mouse over the tooltip container */
+  .tooltip-range:hover .tooltiptext {
+    visibility: visible;
+  }
+
+  @media screen and (max-width: 420px){
+    .Dynamic-btn {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+        margin: 25px 0px;
+    }
+    .support-input{
+        display: none;
+    }
+    .support-header {
+        font-family: monopola_scriptregular;
+        position: relative;
+        font-size: 60px;
+        color: white;
+        display: flex;
+        bottom: 11rem;
+        align-items: flex-start;
+        justify-content: center;
+        left: 0rem;
+    }
+  }
+
+

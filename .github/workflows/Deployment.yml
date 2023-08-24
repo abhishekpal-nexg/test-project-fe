@@ -1,0 +1,138 @@
+name: Deployment
+
+on:
+ issues:
+   types: [opened]
+   
+env:
+  PASS: ${{ secrets.REG_PASS }}
+
+jobs:
+  dev-check:
+    if: ${{ github.event.issue.title == 'deploy dev' }}
+    runs-on: ubuntu-latest
+    steps:  
+
+    - uses: actions/checkout@v3
+      with:
+        ref: 'dev'
+    - name: Use Node.js 14.18.1
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.18.1
+        cache: 'npm'
+        cache-dependency-path: './package.json'
+    - run: npm install
+    - run: npm run build
+    
+    - name: Copy repo
+      env:
+        ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: git clone "https://"$ACCESS_TOKEN"@github.com/NexGenIoT/docker-compose-ops.git"
+      
+    - name: Build docker image
+      run: |
+        cp /home/runner/work/nispand-react/nispand-react/docker-compose-ops/nispand-react/dev/docker-compose.yml /home/runner/work/nispand-react/nispand-react/
+        rm -rf docker-compose-ops
+        docker build -t registry-intl.ap-south-1.aliyuncs.com/meditation/nispand-dev-website:latest .
+        docker login --username=kush-nispand@5211231637134268 registry-intl.ap-south-1.aliyuncs.com -p $PASS
+        docker push registry-intl.ap-south-1.aliyuncs.com/meditation/nispand-dev-website:latest
+      
+    - name: Docker container pull and up
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST_INTER}}
+        username: ${{ secrets.USERNAME_INTER }}
+        password: ${{ secrets.PASSPHRASE_INTER }}
+        script: |
+          cd /home/kush/nispand-react
+          docker login --username=kush-nispand@5211231637134268 registry-intl.ap-south-1.aliyuncs.com -p ${{ secrets.REG_PASS }}
+          docker-compose pull
+          docker-compose up -d
+          docker image prune -f
+          docker ps 
+    
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.REGION }}
+    
+    - name: create CloudFront Invalidation
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUFRONT_ID_DEV }} --paths "/*"
+        
+    - if: ${{ github.event.issue.title == 'deploy dev' }} 
+      name: Close Issue
+      uses: peter-evans/close-issue@v2
+      with:
+        comment: |
+          Issue title must be 'deploy dev'.
+          Auto-closing this issue.
+          
+  prod-check:
+    if: ${{ github.event.issue.title == 'deploy production' }}
+    runs-on: ubuntu-latest
+    steps:  
+
+    - uses: actions/checkout@v3
+      with:
+        ref: 'production'
+    - name: Use Node.js 14.18.1
+      uses: actions/setup-node@v3
+      with:
+        node-version: 14.18.1
+        cache: 'npm'
+        cache-dependency-path: './package.json'
+    - run: npm install
+    - run: npm run build
+      
+    - name: Copy repo
+      env:
+        ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
+      run: git clone "https://"$ACCESS_TOKEN"@github.com/NexGenIoT/docker-compose-ops.git"
+    
+    - name: Build docker image
+      run: |
+        cp /home/runner/work/nispand-react/nispand-react/docker-compose-ops/nispand-react/production/docker-compose.yml /home/runner/work/nispand-react/nispand-react/
+        rm -rf docker-compose-ops
+        docker login --username=kush-nispand@5211231637134268 registry-intl.ap-south-1.aliyuncs.com -p $PASS
+        docker build -t registry-intl.ap-south-1.aliyuncs.com/meditation/nispand-website:latest .
+        docker push registry-intl.ap-south-1.aliyuncs.com/meditation/nispand-website:latest
+      
+    - name: Docker container pull and up
+      uses: appleboy/ssh-action@master
+      with:
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        password: ${{ secrets.PASSPHRASE }}
+        script: |
+          cd /root/nispand-react
+          docker login --username=kush-nispand@5211231637134268 registry-intl.ap-south-1.aliyuncs.com -p ${{ secrets.REG_PASS }}
+          docker-compose pull
+          docker-compose up -d
+          docker image prune -f
+          docker ps 
+          
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: ${{ secrets.REGION }} 
+    
+    - name: create CloudFront Invalidation
+      run: |
+        aws cloudfront create-invalidation --distribution-id ${{ secrets.AWS_CLOUFRONT_ID_PROD }} --paths "/*"
+        
+    - if: ${{ github.event.issue.title == 'deploy production' }} 
+      name: Close Issue
+      uses: peter-evans/close-issue@v2
+      with:
+        comment: |
+          Issue title must be 'deploy production'.
+          Auto-closing this issue.
+          
+          
+          

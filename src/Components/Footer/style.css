@@ -1,0 +1,174 @@
+
+footer{
+    font-family: "leelawadeeui";
+}
+.footer-top{
+    background-color: #0C4371;
+    padding: 70px 30px;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+  }
+  
+  .tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+    position: absolute;
+    z-index: 1;
+  }
+  #fooltip-applestore{
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+   font-size: 12px;
+    position: absolute;
+    bottom: 8%;
+    z-index: 1;
+  }
+
+ .tooltiptext:hover> #fooltip-applestore{
+    visibility: visible;
+  }
+
+
+  #fooltip-sub{
+    visibility: hidden;
+    width: 100px;
+    background-color: black;
+    color: #fff;
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 6px;
+    padding: 3px 0;
+   font-size: 12px;
+    position: absolute;
+    z-index: 1;
+  }
+
+ .tooltiptext:hover> #fooltip-sub{
+    visibility: visible;
+ }
+
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+  }
+
+
+.footer-top .footer-logo{
+    max-width: 212px;
+}
+.footer-top .footer-logo img{
+    width: 100%;
+}
+.footer-top .custom-container .row .col-md-6{
+    margin-top: 25px;
+}
+.footer-top .custom-container .row ul li h3{
+    font-size: 25px;
+    font-weight: 600;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+.footer-top .custom-container .row ul li a{
+    color: #FFFFFF;
+    font-size: 20px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer-bottom{
+    background-color: #040707;
+    padding: 15px 0;
+}
+.footer-bottom .custom-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.footer-bottom-left ul li{
+    display: inline-block;
+    font-size: 20px;
+    color: #FFFFFF;
+}
+.footer-bottom-left ul li a{
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    border-radius: 50%;
+    background-color: #FFFFFF;
+    color: #040707;
+}
+.footer-bottom-left ul li{
+    margin-right: 10px;
+}
+
+.footer-bottom-right ul li{
+    display: inline-block;
+    font-size: 15px;
+    margin: 20px 0;
+    color: #FFFFFF;
+}
+.footer-bottom-right ul li a{
+    color: #FFFFFF;
+}
+.footer-bottom-right ul li:not(:last-child){
+    margin-right: 10px;
+}
+.apple-store-img-footer img, .google-store-img-footer img{
+    width: auto;
+    height: 48px;
+    border-radius: 7px;
+}
+
+
+
+
+@media screen and (max-width: 420px) {
+    .row ul li h3 {
+        font-size: 11px;
+        font-weight: 600;
+        color: #FFFFFF;
+        margin-bottom: 10px;
+    }
+    .row ul li a {
+        color: #FFFFFF;
+        font-size: 12px;
+        display: inline-block;
+        margin-bottom: 0px;
+    }
+    .custom-container {
+        max-width: 94%;
+        margin: 0 auto;
+    }
+    .footer-bottom {
+        background-color: #040707;
+        padding: 15px 0;
+        position: absolute;
+        width: 100%;
+    }
+    .text-white h4{
+        font-size: 9px;
+    }
+    .apple-store-img-footer img, .google-store-img-footer img{
+        width: auto;
+        height: 25px;
+        border-radius: 7px;
+    }
+    .content-algin{
+        justify-content: center !important;
+    }
+}
+

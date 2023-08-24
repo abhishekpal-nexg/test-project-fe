@@ -1,0 +1,76 @@
+@font-face {
+  font-family: "monopola_scriptregular";
+  src: url("/public/fonts/monopola_script_demo-webfont.woff") format("woff2"),
+    url("/public/fonts/monopola_script_demo-webfont.woff2") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "leelawadeeui";
+  src: url("/public/fonts/leelawad-webfont.woff2") format("woff2"),
+    url("/public/fonts/leelawad-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "optimusprincepsregular";
+  src: url("/public/fonts/optimusprinceps-webfont.woff2") format("woff2"),
+    url("/public/fonts/optimusprinceps-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "hero";
+  src: url("/public/fonts/HeroLight-Light.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "optimusprinceps";
+  src: url("/public/fonts/optimusprinceps-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+}
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.custom-container {
+  max-width: 93%;
+  margin: 0 auto;
+}
+
+.custom-btn {
+  background-color: #146295;
+  border-radius: 37px;
+  color: #ffffff;
+  padding: 7px 20px;
+  width: auto;
+  border: none;
+}
